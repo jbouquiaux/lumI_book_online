@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example 1 : vacancy &#8212; Lumi Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"TeX": {"Macros": {"*": "{\\dagger}", "ra": "{\\rangle}", "la": "{\\langle}", "bm": ["{\\boldsymbol #1}", 1], "mcL": "{\\mathcal{L}}", "mcG": "{\\mathcal{G}}", "mcR": "{\\mathcal{R}}", "mcS": "{\\mathcal{S}}", "mcC": "{\\mathcal{C}}", "mcO": "{\\mathcal{O}}", "KS": "{\\text{KS}}", "eph": "{\\text{e-ph}}", "ee": "{\\epsilon}", "phph": "{\\text{ph-ph}}", "FM": "{\\text{FM}}", "DW": "{\\text{DW}}", "QP": "{\\text{QP}}", "BZ": "{\\text{BZ}}", "sign": "{\\text{sign}}", "xc": "{\\text{xc}}", "tchi": "{\\tilde\\chi}", "rr": "{\\bf r}", "RR": "{\\bf R}", "tt": "{\\bf t}", "GG": "{\\bf G}", "kk": "{\\bf k}", "qq": "{\\bf q}", "kq": "{\\kk + \\qq}", "qG": "{\\bf q + G}", "kG": "{\\bf k + G}", "kmq": "{\\kk - \\qq}", "kpq": "{\\kk + \\qq}", "kpG": "{\\kk + \\GG}", "qpG": "{\\qq + \\GG}", "nk": "{n \\kk}", "mk": "{, \\kk}", "nks": "{n \\kk\\sigma}", "mks": "{m \\kk\\sigma}", "enk": "{\\varepsilon_\\nk}", "emkq": "{\\varepsilon_{m\\kk+\\qq}}", "qnu": "{\\qq \\nu}", "wqnu": "{\\omega_{\\qnu}}", "vnk": "{\\mathbf{v}_{n\\kk}}", "vmkq": "{\\mathbf{v}_{m\\kk+\\qq}}", "vnka": "{\\mathrm{v}_{n\\kk,\\alpha}}", "vnkb": "{\\mathrm{v}_{n\\kk,\\beta}}", "ef": "{\\varepsilon_F}", "gkkp": "{g_{mn\\nu}(\\kk,\\qq)}", "gkq": "{g_{mn\\nu}(\\kk,\\qq)}", "Go": "{G_0}", "Wo": "{W_0}", "Ueff": "{U_{\\text{eff}}}", "tee": "{\\tilde{\\epsilon}}", "ww": "{\\omega}", "tww": "{\\tilde\\omega}", "dd": "{\\,\\text{d}}", "vxc": "{v_\\xc}", "Ri": "{\\mcR^{-1}}", "Rit": "{\\mcR^{-1\\tau}}", "Si": "{\\mcS^{-1}}}", "Sit": "{\\Si^\\tau}}", "PDER": ["{\\dfrac{\\partial #1}{\\partial #2}}", 2], "FDER": ["{\\dfrac{\\delta #1}{\\delta #2}}", 2], "tPsi": "{\\tilde\\Psi}", "tpsi": "{\\tilde\\psi}", "tPhi": "{\\tilde\\Phi}", "tphi": "{\\tilde\\phi}", "tprj": "{\\tilde p}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ifc_emb/examples/example_1';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Example 1" href="example_2.html" />
+    <link rel="prev" title="Examples" href="../lesson_ifc_emb_examples.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/lumi.png" class="logo__image only-light" alt="Lumi Book - Home"/>
+    <script>document.write(`<img src="../../_static/lumi.png" class="logo__image only-dark" alt="Lumi Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">IFCs embedding</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">IFCs embedding, theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson_ifc_emb_abinitio.html">ab-initio computations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson_ifc_emb_postprocess.html">post-processing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../lesson_ifc_emb_examples.html">Examples</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Example 1 : vacancy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_2.html">Example 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_3.html">Example 1</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Luminescence lineshape of point defects</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../lumi/theory.html">Theory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lumi/lesson_lumi.html"><span class="math notranslate nohighlight">\(\Delta\)</span>SCF constrained occupation method and Configuration coordinate diagram</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jbouquiaux/lumi_book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jbouquiaux/lumi_book/edit/master/lumi_book/ifc_emb/examples/example_1.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jbouquiaux/lumi_book/issues/new?title=Issue%20on%20page%20%2Fifc_emb/examples/example_1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/ifc_emb/examples/example_1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Example 1 : vacancy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-pristine-phonopy-object">Create the pristine phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-defect-phonopy-object">Create the defect phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-embedded-phonopy-object">Create the embedded phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phonons-modes-and-localisation-ratio">Phonons modes and localisation ratio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unfolding">Unfolding</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="example-1-vacancy">
+<h1>Example 1 : vacancy<a class="headerlink" href="#example-1-vacancy" title="Link to this heading">#</a></h1>
+<p>This section shows the IFC embedding procedure on a vacancy. The example system is the F-center in CaO, i.e. the oxygen vacancy (<span class="math notranslate nohighlight">\(V_O\)</span>) in CaO, as shown in the image below. The isosurface represents the in-gap “1s” defect state.</p>
+<p><img alt="" src="../../_images/V_O_CaO.png" /></p>
+<p>Computations details :</p>
+<ul class="simple">
+<li><p>CaO (2 atoms/cell)</p></li>
+<li><p>Pristine phonons are computed with dfpt (abinit) on a 4x4x4 q-mesh</p></li>
+<li><p>The 4x4x4 pristine phonons are folded on the correspondind 4x4x4 supercell (128 atoms)</p></li>
+<li><p>Defect phonons are computed with phonopy + abinit on a 2x2x2 supercell with one O vacancy (15 atoms)</p></li>
+</ul>
+<section id="create-the-pristine-phonopy-object">
+<h2>Create the pristine phonopy object<a class="headerlink" href="#create-the-pristine-phonopy-object" title="Link to this heading">#</a></h2>
+<p>We start by opening a DDB file of CaO computed on a 4x4x4 q-mesh.</p>
+<p>We then go from a 4x4x4 q-mesh to a 4x4x4 supercell (folding procedure) with abipy/dfpt/converters/ddb_ucell_to_phonopy_supercell</p>
+<p>One could first interpolate on a denser q-mesh with (then folded on a larger supercell, see commented code)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">abipy.embedding.embedding_ifc</span> <span class="kn">import</span> <span class="n">Embedded_phonons</span>
+<span class="kn">from</span> <span class="nn">abipy.abilab</span> <span class="kn">import</span> <span class="n">abiopen</span>
+<span class="kn">from</span> <span class="nn">abipy.core.kpoints</span> <span class="kn">import</span> <span class="n">kmesh_from_mpdivs</span>
+<span class="kn">from</span> <span class="nn">abipy.dfpt.converters</span> <span class="kn">import</span> <span class="n">ddb_ucell_to_phonopy_supercell</span><span class="p">,</span><span class="n">ddb_ucell_to_ddb_supercell</span>
+<span class="kn">import</span> <span class="nn">phonopy</span>
+<span class="kn">from</span> <span class="nn">pymatgen.io.phonopy</span> <span class="kn">import</span> <span class="n">get_pmg_structure</span><span class="p">,</span><span class="n">get_phonopy_structure</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span> <span class="c1"># to get rid of deprecation warnings</span>
+<span class="c1">#from abipy import abilab</span>
+<span class="c1">#abilab.enable_notebook() # This line tells AbiPy we are running inside a notebook</span>
+<span class="c1"># This line configures matplotlib to show figures embedded in the notebook.</span>
+<span class="c1"># Replace `inline` with `notebook` in classic notebook</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">ddb_ucell_to_phonopy_supercell</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function ddb_ucell_to_phonopy_supercell in module abipy.dfpt.converters:
+
+ddb_ucell_to_phonopy_supercell(unit_ddb=None, unit_ddb_filepath=None, nac=True) -&gt; &#39;Phonopy&#39;
+    Convert a DDB file or DDB instance of a unit cell on a q-mesh to the corresponding supercell
+    at q=Gamma.
+    
+    Args:
+        ddb_unit_cell: an instance of DDB file.
+        unit_ddb_filepath : alternatively, a path to the input DDB.
+        supercell_ddb_path: DDB path of the output DDB on a supercell at Gamma
+        nac : Set the non-analytical correction
+    
+    Returns:
+        a Phonopy instance.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open a 4x4x4 q-mesh ddb of CaO</span>
+<span class="n">ddb_pristine_444</span> <span class="o">=</span> <span class="n">abiopen</span><span class="p">(</span><span class="s2">&quot;../files/example_1/bulk_out_DDB&quot;</span><span class="p">)</span>
+
+<span class="c1">#qpts=kmesh_from_mpdivs(mpdivs=[6,6,6],shifts=[0,0,0],order=&quot;unit_cell&quot;)</span>
+<span class="c1">#ddb_pristine_666=ddb_pristine.anaget_interpolated_ddb(qpt_list=qpts)</span>
+
+<span class="c1"># go from a 4x4x4 q-mesh to a 4x4x4 supercell</span>
+
+<span class="n">ph_pristine</span><span class="o">=</span><span class="n">ddb_ucell_to_phonopy_supercell</span><span class="p">(</span><span class="n">unit_ddb</span><span class="o">=</span><span class="n">ddb_pristine_444</span><span class="p">,</span><span class="n">nac</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-the-defect-phonopy-object">
+<h2>Create the defect phonopy object<a class="headerlink" href="#create-the-defect-phonopy-object" title="Link to this heading">#</a></h2>
+<p>We open a DDB file of CaO with <span class="math notranslate nohighlight">\(V_O\)</span>. This DDB file was computed on a 2x2x2 supercell.</p>
+<p>We then convert this DDB file to phonopy format.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ddb_defect</span><span class="o">=</span> <span class="n">abiopen</span><span class="p">(</span><span class="s2">&quot;../files/example_1/defect_out_DDB&quot;</span><span class="p">)</span>
+
+<span class="n">ph_defect</span><span class="o">=</span><span class="n">ddb_defect</span><span class="o">.</span><span class="n">anaget_phonopy_ifc</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-the-embedded-phonopy-object">
+<h2>Create the embedded phonopy object<a class="headerlink" href="#create-the-embedded-phonopy-object" title="Link to this heading">#</a></h2>
+<p>In order to construct an embedded phonopy object, use <code class="docutils literal notranslate"><span class="pre">abipy/embedding.embedding_ifc/Embedded_phonons</span></code>.</p>
+<p>The parameters are shown in the cell below.</p>
+<p>One critical aspect is to provide the correct structural informations to the code. In order to perform the matching, the code expects the defect structure (15 atoms supercell) without defect-induced relaxation.</p>
+<p>The code also expects the coordinate of the defect in the large pristine supercell.</p>
+<p>See the code below for a detailed example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Embedded_phonons</span><span class="o">.</span><span class="n">from_phonopy_instances</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method from_phonopy_instances in module abipy.embedding.embedding_ifc:
+
+from_phonopy_instances(phonopy_pristine, phonopy_defect, structure_defect_wo_relax, main_defect_coords_in_pristine, main_defect_coords_in_defect, substitutions_list: list = None, vacancies_list: list = None, interstitial_list: list = None, tol_mapping=0.01, cut_off_mode=&#39;auto&#39;, rc_1=None, rc_2=None, factor_ifc=1, verbose=0, asr=True) -&gt; phonopy.api_phonopy.Phonopy class method of abipy.embedding.embedding_ifc.Embedded_phonons
+    Args:
+        phonopy_pristine: Phonopy object of the pristine structure
+        phonopy_defect  : Phonopy object of the defect structure
+        structure_defect_wo_relax : Supercell structure associated to the defect structure, but without relaxation. Needed for an easier mapping.
+            Should corresponds to order of phonopy_defect structure!
+        main_defect_coords_in_pristine : Main coordinates of the defect in pristine structure, if defect complex, can be set to the
+            center of mass of the complex
+        main_defect_coords_in_defect : Main coordinates of the defect in defect structure, if defect complex, can be set to the
+            center of mass of the complex
+        substitutions_list : List of substitutions infos [index,specie], ex : [[0, &quot;Eu&quot;],[1,&quot;N&quot;]]
+        vacancies_list : List of indices where the vacancies are, ex: [13,14]
+        interstitial_list : List of interstitial infos [specie, cart_coord], ex [[&#39;Eu&#39;,[0,0,0]],[&#39;Ce&#39;,&#39;[0,0,3]&#39;]]
+        tol_mapping : Tolerance in angstrom for the mapping between structures
+        cut_off_mode : Cut off mode for the radii of the sphere centered around the defect (rc_2). if &#39;auto&#39; : the code tries to find the largest sphere 
+            inscribed in the defect supercell. If &#39;manual&#39; :  rc_1 and rc_2 should be provided.
+        rc_1 : Radii of the sphere centered around the defect outside which the IFCs are set to zero, allows to get sparse matrix. 
+        rc_2 : Radii of the sphere centered around the defect where the IFCs of the defect computation are included 
+        factor_ifc : Multiply the IFCs inside the sphere of radii rc_2 by factor_ifc, usefull to introduce fictious high-frequency local mode 
+        verbose : Print explicitely all the IFCs replacements 
+        asr : If True, re-enforce acoustic sum rule after IFCs embedding, following eq. (S4) of https://pubs.acs.org/doi/10.1021/acs.chemmater.3c00537
+    
+    Returns:
+        A new phonopy object with the embedded structure and embedded IFCs.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">########</span>
+
+<span class="c1"># index of the O vacancy = 8 (in 15 atoms defect structure), this is found manually</span>
+<span class="n">idefect_defect_stru</span><span class="o">=</span><span class="mi">8</span>
+
+<span class="c1"># We need first to create the defect structure without relax</span>
+<span class="n">ddb_pristine_structure</span><span class="o">=</span><span class="n">ddb_pristine_444</span><span class="o">.</span><span class="n">structure</span>
+<span class="n">structure_defect_wo_relax</span><span class="o">=</span><span class="n">ddb_pristine_structure</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">structure_defect_wo_relax</span><span class="o">.</span><span class="n">make_supercell</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">main_defect_coords_in_defect</span><span class="o">=</span><span class="n">structure_defect_wo_relax</span><span class="o">.</span><span class="n">cart_coords</span><span class="p">[</span><span class="n">idefect_defect_stru</span><span class="p">]</span>
+
+<span class="n">structure_defect_wo_relax</span><span class="o">.</span><span class="n">remove_sites</span><span class="p">(</span><span class="n">indices</span><span class="o">=</span><span class="p">[</span><span class="n">idefect_defect_stru</span><span class="p">])</span>
+<span class="n">structure_defect_wo_relax</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># important. </span>
+
+
+
+<span class="c1"># index of the vacancy = 64 (in pristine structure), this is either found manually or with the help code get_index_in_pristine_stru</span>
+
+<span class="n">idefect_pristine_stru</span><span class="o">=</span><span class="mi">64</span>
+<span class="n">main_defect_coords_in_pristine</span><span class="o">=</span><span class="n">get_pmg_structure</span><span class="p">(</span><span class="n">ph_pristine</span><span class="o">.</span><span class="n">supercell</span><span class="p">)</span><span class="o">.</span><span class="n">cart_coords</span><span class="p">[</span><span class="n">idefect_pristine_stru</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">get_index_in_pristine_stru</span><span class="p">(</span><span class="n">coords_defect_stru_defect</span><span class="p">,</span><span class="n">pristine_stru</span><span class="p">,</span><span class="n">tol</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+    <span class="n">pristine_stru_cart</span><span class="o">=</span><span class="n">pristine_stru</span><span class="o">.</span><span class="n">cart_coords</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">site_2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pristine_stru</span><span class="p">):</span>  
+        <span class="k">if</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">coords_defect_stru_defect</span> <span class="o">-</span> <span class="n">pristine_stru_cart</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span> <span class="o">&lt;</span> <span class="n">tol</span> <span class="p">:</span>
+            <span class="n">index</span><span class="o">=</span><span class="n">j</span>
+    <span class="k">return</span> <span class="n">index</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">get_index_in_pristine_stru</span><span class="p">(</span><span class="n">main_defect_coords_in_defect</span><span class="p">,</span><span class="n">get_pmg_structure</span><span class="p">(</span><span class="n">ph_pristine</span><span class="o">.</span><span class="n">supercell</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ph_emb</span><span class="o">=</span><span class="n">Embedded_phonons</span><span class="o">.</span><span class="n">from_phonopy_instances</span><span class="p">(</span>
+                               <span class="n">phonopy_pristine</span><span class="o">=</span><span class="n">ph_pristine</span><span class="p">,</span>
+                               <span class="n">phonopy_defect</span><span class="o">=</span><span class="n">ph_defect</span><span class="p">,</span>
+                               <span class="n">structure_defect_wo_relax</span><span class="o">=</span><span class="n">structure_defect_wo_relax</span><span class="p">,</span>
+                               <span class="n">main_defect_coords_in_pristine</span><span class="o">=</span><span class="n">main_defect_coords_in_pristine</span><span class="p">,</span>
+                               <span class="n">main_defect_coords_in_defect</span><span class="o">=</span><span class="n">main_defect_coords_in_defect</span><span class="p">,</span> 
+                               <span class="n">substitutions_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
+                               <span class="n">vacancies_list</span><span class="o">=</span><span class="p">[</span><span class="n">idefect_pristine_stru</span><span class="p">],</span>       
+                               <span class="n">interstitial_list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>  
+                               <span class="n">cut_off_mode</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+                               <span class="n">factor_ifc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                               <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                               <span class="n">asr</span><span class="o">=</span><span class="kc">True</span><span class="p">,)</span>
+
+<span class="c1">### The phonopy object can be converted to a DDB</span>
+
+<span class="c1">#ddb=ph_emb.to_ddb(tmp_dir+&quot;out_DDB&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of atoms in the pristine supercell      : 128
+Number of atoms in the defective supercell     : 15
+Defect infos
+    Vacancies :
+       64, [1.97007526 1.39305357 3.41227044], O1 removed
+Mapping after structure manipulation           : 15/15
+
+ Set IFC to explicit defect phonons calculations if both atoms are separated from defect by a distance &lt; R_c2 = 3.378
+
+ Enforce ASR
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Embedding procedure done
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="phonons-modes-and-localisation-ratio">
+<h2>Phonons modes and localisation ratio<a class="headerlink" href="#phonons-modes-and-localisation-ratio" title="Link to this heading">#</a></h2>
+<p>We finally obtain the phonon eigenvectors and eigenfrequencies of the embedded system with
+<code class="docutils literal notranslate"><span class="pre">abipy/embedding/utils_ifc/get_gamma_freq_with_vec_abipy_fmt()</span></code> (such that eigenfrequencies are in eV and that ph_vec[iband][iatom] gives eigenvector of iband,iatom)</p>
+<p>The localization ratio of each mode and the most localized modes can be visualized with vesta thanks to <code class="docutils literal notranslate"><span class="pre">abipy/embedding/utils_ifc/vesta_phonon()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freqs</span><span class="p">,</span><span class="n">vecs</span><span class="o">=</span><span class="n">ph_emb</span><span class="o">.</span><span class="n">get_gamma_freq_with_vec_abipy_fmt</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract the localization ratio of each phonon mode and print the 3 most localized modes</span>
+
+<span class="kn">from</span> <span class="nn">abipy.embedding.utils_ifc</span> <span class="kn">import</span> <span class="n">localization_ratio</span>
+
+<span class="n">ratio</span><span class="o">=</span><span class="n">localization_ratio</span><span class="p">(</span><span class="n">vecs</span><span class="p">)</span>
+
+<span class="n">ibands</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">ratio</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;band indices:&quot;</span><span class="p">,</span><span class="n">ibands</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;localization ratio:&quot;</span><span class="p">,</span> <span class="n">ratio</span><span class="p">[</span><span class="n">ibands</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;frequencies :&quot;</span><span class="p">,</span> <span class="n">freqs</span><span class="p">[</span><span class="n">ibands</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>band indices: [123 100 209]
+localization ratio: [12.58568782 10.30587315  9.61470298]
+frequencies : [0.02748962 0.02655018 0.03389308]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Prepare the structure for vesta_phonons </span>
+
+<span class="kn">from</span> <span class="nn">abipy.core.structure</span> <span class="kn">import</span> <span class="n">Structure</span>
+
+<span class="n">Structure</span><span class="p">(</span><span class="n">species</span><span class="o">=</span><span class="n">get_pmg_structure</span><span class="p">(</span><span class="n">ph_emb</span><span class="o">.</span><span class="n">supercell</span><span class="p">)</span><span class="o">.</span><span class="n">species</span><span class="p">,</span>
+          <span class="n">coords</span><span class="o">=</span><span class="n">get_pmg_structure</span><span class="p">(</span><span class="n">ph_emb</span><span class="o">.</span><span class="n">supercell</span><span class="p">)</span><span class="o">.</span><span class="n">frac_coords</span><span class="p">,</span>
+          <span class="n">lattice</span><span class="o">=</span><span class="n">get_pmg_structure</span><span class="p">(</span><span class="n">ph_emb</span><span class="o">.</span><span class="n">supercell</span><span class="p">)</span><span class="o">.</span><span class="n">lattice</span><span class="p">)</span><span class="o">.</span><span class="n">visualize</span><span class="p">()</span>
+
+<span class="c1"># visualize the structure with vesta</span>
+<span class="c1"># Save it in vesta format. TO COMPLETE</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing data to: .xsf with fmt: xsf
+<span class=" -Color -Color-Yellow">Executing MacOSx open command: open -a vesta --args   /Users/jbouquiaux/git/lumi_book/lumi_book/ifc_emb/examples/.xsf</span>
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="unfolding">
+<h2>Unfolding<a class="headerlink" href="#unfolding" title="Link to this heading">#</a></h2>
+<p>We finally draw the phonon band structure of the embedded system onto the wave vector path of the underlying unit cell (unfolding procedure). We use the phonopy implementation, see https://iopscience.iop.org/article/10.1088/1361-648X/acd831/meta.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain the q-path</span>
+<span class="n">bs</span><span class="p">,</span><span class="n">dos</span><span class="o">=</span><span class="n">ddb_pristine_444</span><span class="o">.</span><span class="n">anaget_phbst_and_phdos_files</span><span class="p">(</span><span class="n">ndivsm</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">nqsmall</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">dipdip</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">qpoints</span><span class="o">=</span><span class="n">bs</span><span class="o">.</span><span class="n">phbands</span><span class="o">.</span><span class="n">qpoints</span><span class="o">.</span><span class="n">frac_coords</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#### P. B. Allen et al., Phys. Rev. B 87, 085322 (2013)</span>
+<span class="c1">#### Implemented in Phonopy</span>
+
+<span class="kn">from</span> <span class="nn">phonopy.unfolding.core</span> <span class="kn">import</span> <span class="n">Unfolding</span>
+
+<span class="n">unfolding_supercell_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span> <span class="c1"># supercell size</span>
+
+<span class="n">mapping</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ph_pristine</span><span class="o">.</span><span class="n">supercell</span><span class="p">)))</span>
+<span class="n">mapping</span><span class="p">[</span><span class="n">idefect_pristine_stru</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span> <span class="c1"># set the vacancy, see </span>
+<span class="c1"># https://github.com/phonopy/phonopy/blob/7f34627cf0ef68f688f744c2f51f44856d47e27e/phonopy/unfolding/core.py</span>
+
+<span class="n">unfolding_emb</span> <span class="o">=</span> <span class="n">Unfolding</span><span class="p">(</span><span class="n">ph_emb</span><span class="p">,</span> <span class="n">unfolding_supercell_matrix</span><span class="p">,</span>
+                             <span class="n">ph_pristine</span><span class="o">.</span><span class="n">supercell</span><span class="o">.</span><span class="n">scaled_positions</span><span class="p">,</span> <span class="n">mapping</span><span class="p">,</span> <span class="n">qpoints</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unfolding_emb</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepare the plotting</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">unfolding_emb</span><span class="o">.</span><span class="n">qpoints</span>
+<span class="n">y</span><span class="o">=</span><span class="n">unfolding_emb</span><span class="o">.</span><span class="n">frequencies</span>
+<span class="n">z</span><span class="o">=</span><span class="n">unfolding_emb</span><span class="o">.</span><span class="n">unfolding_weights</span>
+
+<span class="n">nqpts</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">nfreq</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">xs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+
+<span class="n">new_xs</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">new_z</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">new_y</span><span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># keep only weights &gt; 1e-5 for vizualisation.</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">xs</span><span class="p">):</span>
+    <span class="n">new_z_per_q</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">new_y_per_q</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">weight</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">1e-5</span><span class="p">:</span>
+            <span class="n">new_z_per_q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">new_y_per_q</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span>
+    <span class="n">new_z</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_z_per_q</span><span class="p">))</span>
+    <span class="n">new_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_y_per_q</span><span class="p">))</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">axs</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">q</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">sc</span><span class="o">=</span><span class="n">axs</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">xs</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">new_y</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="mf">0.00413566</span><span class="o">*</span><span class="n">new_y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="c1"># put in eV</span>
+                   <span class="n">s</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span> <span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="p">(</span><span class="n">new_z</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;bone_r&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">)</span>
+
+<span class="n">bs</span><span class="o">.</span><span class="n">phbands</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/c402d2d8de9bb8dad0d4643e894baf5c37c6235e06d0cc188de5351dc4ac8daa.png" src="../../_images/c402d2d8de9bb8dad0d4643e894baf5c37c6235e06d0cc188de5351dc4ac8daa.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ifc_emb/examples"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lesson_ifc_emb_examples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="example_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Example 1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-pristine-phonopy-object">Create the pristine phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-defect-phonopy-object">Create the defect phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-embedded-phonopy-object">Create the embedded phonopy object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#phonons-modes-and-localisation-ratio">Phonons modes and localisation ratio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unfolding">Unfolding</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By J. Bouquiaux and the AbiPy group
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

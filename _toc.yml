@@ -1,0 +1,21 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: IFCs embedding
+  chapters:
+  - file: ifc_emb/theory.md
+  - file: ifc_emb/lesson_ifc_emb_abinitio.md
+  - file: ifc_emb/lesson_ifc_emb_postprocess.md
+  - file: ifc_emb/lesson_ifc_emb_examples.md
+    sections:
+    - file: ifc_emb/examples/example_1.md
+    - file: ifc_emb/examples/example_2.md
+    - file: ifc_emb/examples/example_3.md
+
+- caption: Luminescence lineshape of point defects
+  chapters:
+  - file: lumi/theory.md
+  - file: lumi/lesson_lumi.md  
